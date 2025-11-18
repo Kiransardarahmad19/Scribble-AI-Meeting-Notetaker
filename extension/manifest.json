@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Scribble — Meeting Notetaker",
+  "version": "0.1.0",
+  "description": "Local, private meeting notes using Whisper.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Scribble"
+  },
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "storage",
+    "downloads",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["pcm-worklet.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

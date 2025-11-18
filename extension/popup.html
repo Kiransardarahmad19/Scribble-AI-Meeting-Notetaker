@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scribble</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+        <h1>🖊️ Scribble</h1>
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <label class="mic">
+                <input type="checkbox" id="includeMic" /> Include mic
+            </label>
+        </div>
+        <div class="notes">
+            <textarea id="notes" placeholder="Notes will appear here..." spellcheck="false"></textarea>
+        </div>
+        <div class="toolbar">
+            <button id="clearBtn">Clear</button>
+            <button id="exportBtn">Export .txt</button>
+        </div>
+        <p class="hint">Keep this popup open while recording.</p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
